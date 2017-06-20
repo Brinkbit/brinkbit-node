@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Brinkbit/brinkbit.git"
+    "url": "git+https://github.com/Brinkbit/brinkbit-node.git"
   },
   "keywords": [
     "brinkbit",
@@ -19,9 +19,9 @@
   "author": "Brinkbit",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Brinkbit/brinkbit/issues"
+    "url": "https://github.com/Brinkbit/brinkbit-node/issues"
   },
-  "homepage": "https://github.com/Brinkbit/brinkbit#readme",
+  "homepage": "https://github.com/Brinkbit/brinkbit-node#readme",
   "devDependencies": {
     "chai": "^4.0.2",
     "cross-env": "^5.0.1",
