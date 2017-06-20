@@ -1,0 +1,7 @@
+{
+    "extends": "brinkbit",
+    "root": true,
+    "rules": {
+        "no-param-reassign": 0
+    }
+}
