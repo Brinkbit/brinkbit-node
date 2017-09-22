@@ -46,7 +46,7 @@ module.exports = class Brinkbit {
                 }
                 request({
                     method: req.method,
-                    url: `${opts.base || 'https://brinkbit.com'}/api/${opts.apiVersion || '0.1'}/${this.options.gameId}${req.path}`,
+                    url: `${opts.base || 'https://brinkbit.com'}/api/${opts.apiVersion || '0.1'}${req.path}`,
                     qs: req.query,
                     headers,
                     form: body,
