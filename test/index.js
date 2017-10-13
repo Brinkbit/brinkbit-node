@@ -69,6 +69,24 @@ describe( 'sdk', function() {
             expect( brinkbit.base ).to.equal( '/valid/valid/' );
         });
 
+        it( 'should support requests without gameId specified', function() {
+            const session = supertest( this.app );
+            return session.post( '/api/token' )
+            .send({
+                client_id: env.client.config.gameId,
+                username: env.player.username,
+                password: env.player.password,
+                scope: 'player.basic_info:read player.basic_info:write data:read:write',
+                grant_type: 'password',
+            })
+            .expect( 200 )
+            .expect(( res ) => {
+                expect( res.body.access_token ).to.exist;
+                expect( res.body.token_type ).to.equal( 'Bearer' );
+            })
+            .exec();
+        });
+
         it( 'should forward password token grant requests', function() {
             const session = supertest( this.app );
             return session.post( `/api/${env.client.config.gameId}/token` )
