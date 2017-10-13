@@ -55,7 +55,7 @@ class Brinkbit {
             }
             const serviceRequest = request({
                 method: req.method,
-                url: `${this.base}${req.params[0].replace( `/${this.gameId}/`, '' )}`,
+                url: `${this.base}${req.params[0].replace( `${this.gameId}/`, '' ).slice( 1 )}`,
                 headers,
                 qs: req.query,
             });
