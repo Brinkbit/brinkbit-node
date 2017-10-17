@@ -4,7 +4,7 @@
   "description": "Node.js brinkbit sdk",
   "main": "src/index.js",
   "scripts": {
-    "preversion": "npm test && git add -A && git commit -m 'Rebuild'",
+    "preversion": "npm test",
     "postversion": "git push origin master && hub pull-request -m 'Bump version' && git push --tags upstream && npm publish",
     "test": "cross-env NODE_ENV=test nyc --reporter=html --reporter=text mocha test/index.js",
     "debug": "cross-env NODE_ENV=debug mocha test/index.js"
