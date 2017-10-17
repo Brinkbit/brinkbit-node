@@ -302,8 +302,8 @@ braces@^1.8.2:
     repeat-element "^1.1.2"
 
 brinkbit-plugin@^0.1.0:
-  version "0.1.1"
-  resolved "https://registry.yarnpkg.com/brinkbit-plugin/-/brinkbit-plugin-0.1.1.tgz#e7d42fe895e2e8723ffa12a64431154236cee54d"
+  version "0.1.3"
+  resolved "https://registry.yarnpkg.com/brinkbit-plugin/-/brinkbit-plugin-0.1.3.tgz#f706b9b38b2c16741846886af29657d7234b10a1"
   dependencies:
     custom-error-instance "^2.1.1"
     event-emitter "^0.3.5"
@@ -503,8 +503,8 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
 
 cross-env@^5.0.1:
-  version "5.0.5"
-  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.0.5.tgz#4383d364d9660873dd185b398af3bfef5efffef3"
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/cross-env/-/cross-env-5.1.0.tgz#1f12d6b3777d5847dcf9cf39fbee3c6a76dd5058"
   dependencies:
     cross-spawn "^5.1.0"
     is-windows "^1.0.0"
@@ -830,8 +830,8 @@ eslint-plugin-node@^4.2.2:
     semver "5.3.0"
 
 eslint-plugin-promise@^3.5.0:
-  version "3.5.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.5.0.tgz#78fbb6ffe047201627569e85a6c5373af2a68fca"
+  version "3.6.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-promise/-/eslint-plugin-promise-3.6.0.tgz#54b7658c8f454813dc2a870aff8152ec4969ba75"
 
 eslint-plugin-react@^7.1.0:
   version "7.4.0"
@@ -958,8 +958,8 @@ expand-range@^1.8.1:
     fill-range "^2.1.0"
 
 express@^4.15.3:
-  version "4.16.1"
-  resolved "https://registry.yarnpkg.com/express/-/express-4.16.1.tgz#6b33b560183c9b253b7b62144df33a4654ac9ed0"
+  version "4.16.2"
+  resolved "https://registry.yarnpkg.com/express/-/express-4.16.2.tgz#e35c6dfe2d64b7dca0a5cd4f21781be3299e076c"
   dependencies:
     accepts "~1.3.4"
     array-flatten "1.1.1"
