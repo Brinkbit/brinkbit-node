@@ -95,8 +95,7 @@ class Brinkbit {
         return normalizeResponse( this._delete( options ), options );
     }
 
-    login( ...args ) {
-        const options = normalizeArguments( ...args );
+    login( options, player ) {
         let token;
         const promise = Bluebird.any([
             validate( options, {
@@ -137,14 +136,22 @@ class Brinkbit {
         })
         .then(( response ) => {
             token = response.body.access_token;
+            if ( options.stayLoggedIn ) {
+                this.store( 'token', token );
+            }
             return this._get( './playerinfo/', token );
         })
         .then(( response ) => {
-            const player = new this.Player( response.body );
+            player = player || new this.Player();
+            player.data = response.body;
+            player.id = player.data._id;
             player.stayLoggedIn = options.stayLoggedIn;
             player.token = token;
             if ( !this.Player.primary ) {
                 this.Player.primary = player;
+                if ( options.stayLoggedIn ) {
+                    this.store( 'playerId', player.id );
+                }
             }
             this.emit( 'login', new BrinkbitEvent( 'login', player ));
             return player;
