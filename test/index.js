@@ -165,6 +165,7 @@ describe( 'sdk', function() {
             });
 
             it( 'should log additonal players in as secondary players', function() {
+                this.timeout( 10000 );
                 return this.brinkbit.login( env.player )
                 .then(() => this.brinkbit.login( env.player2 ))
                 .then(( player ) => {
@@ -190,6 +191,7 @@ describe( 'sdk', function() {
 
         describe( 'promote', function() {
             before( function() {
+                this.timeout( 10000 );
                 this.brinkbit = new Brinkbit( env.client.config );
                 return this.brinkbit.login( env.player )
                 .then(() => this.brinkbit.login( env.player2 ))
