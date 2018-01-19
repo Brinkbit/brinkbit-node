@@ -30,7 +30,7 @@ class Brinkbit {
                 dataType: 'function',
             },
             scope: {
-                dataType: 'string',
+                dataType: 'array',
             },
         });
         this.gameId = config.gameId;
@@ -42,6 +42,7 @@ class Brinkbit {
             'player.basic_info:read',
             'player.basic_info:write',
             'data:read:write',
+            'drm.key:write',
         ];
 
         this.use( Plugin.defaults );
@@ -305,7 +306,6 @@ class Brinkbit {
             }
             return new Bluebird(( resolve, reject ) => {
                 request( options, ( err, response, body ) => {
-                    // console.log( response );
                     if (( err && !( err instanceof SyntaxError )) || response.statusCode >= 400 ) {
                         this.emit( 'error', response );
                         const error = new Error( 'HTTP error' );
